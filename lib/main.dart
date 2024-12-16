@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:motor_cycle1/view/home_view.dart';
-import 'package:motor_cycle1/view/sign_up_view.dart';
-import 'package:motor_cycle1/view/splash_view.dart';
-import 'package:motor_cycle1/view/welcome_view.dart';
+import 'package:motor_cycle1/core/widgets/global_text_field.dart';
+import 'package:motor_cycle1/view/registration/sign_in.dart';
+import 'package:motor_cycle1/view/registration/sign_up.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,16 +12,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-    debugShowCheckedModeBanner: false,
-      initialRoute: "Splash",
-      routes: {
-        SplashView.splash: (context) => SplashView(),
-        SignUpView.signUpView :(context)=>SignUpView(),
-        HomeView.home: (context) => HomeView(),
-        WelcomeView.welcomeView:(context)=>WelcomeView(),
-
-      },
+    return SafeArea(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute: SignInScreen.namedRout,
+        routes: {
+          SignInScreen.namedRout: (_) => SignInScreen(),
+          SignUpScreen.namedRout: (_) => SignUpScreen(),
+        },
+      ),
     );
   }
 }
