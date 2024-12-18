@@ -5,10 +5,10 @@ class BackButtonWidget extends StatelessWidget {
   void Function()? onTap;
   IconData? icon;
 
-  BackButtonWidget({
+  BackButtonWidget( {
     super.key,
     this.onTap,
-    this.icon,
+   this.icon,
   });
 
   @override

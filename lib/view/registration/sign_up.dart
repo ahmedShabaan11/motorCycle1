@@ -4,6 +4,7 @@ import 'package:motor_cycle1/core/string_manager.dart';
 import 'package:motor_cycle1/core/widgets/back_button.dart';
 import 'package:motor_cycle1/core/widgets/custom_button.dart';
 import 'package:motor_cycle1/core/widgets/global_text_field.dart';
+import 'package:motor_cycle1/view/registration/sign_in.dart';
 
 class SignUpScreen extends StatelessWidget {
   static const String namedRout = "signUpScreen";
@@ -20,7 +21,12 @@ class SignUpScreen extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  BackButtonWidget(),
+                  BackButtonWidget(
+                    onTap: () {
+                      Navigator.pushNamed(context, SignInScreen.namedRout);
+                    },
+                    icon: Icons.arrow_back_ios_new_outlined,
+                  ),
                   Spacer(),
                   Text(
                     StringManager.signUp,

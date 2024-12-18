@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:motor_cycle1/core/widgets/global_text_field.dart';
+import 'package:motor_cycle1/view/next_view.dart';
 import 'package:motor_cycle1/view/registration/sign_in.dart';
 import 'package:motor_cycle1/view/registration/sign_up.dart';
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         initialRoute: SignInScreen.namedRout,
         routes: {
+          NextView.namedRoute: (_) => NextView(),
           SignInScreen.namedRout: (_) => SignInScreen(),
           SignUpScreen.namedRout: (_) => SignUpScreen(),
         },
