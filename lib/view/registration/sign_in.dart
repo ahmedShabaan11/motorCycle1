@@ -20,19 +20,18 @@ class SignInScreen extends StatelessWidget {
       body: Form(
         child: Column(
           children: [
-            Row(
-              children: [
-                BackButtonWidget(
-                  icon: Icons.arrow_back_ios_new_outlined,
-                ),
-                Spacer(),
-                Text(
-                  StringManager.signIn,
-                  style: TextStyle(color: Colors.white, fontSize: 22),
-                ),
-                Spacer(),
-                Spacer()
-              ],
+            Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: Row(
+                children: [
+                  Spacer(),
+                  Text(
+                    StringManager.signIn,
+                    style: TextStyle(color: Colors.white, fontSize: 22),
+                  ),
+                  Spacer(),
+                ],
+              ),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.15,
